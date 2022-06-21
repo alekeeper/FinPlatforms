@@ -15,14 +15,18 @@ public class Main {
         List<File> fileList = new ArrayList<>();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите адрес корневой папки: ");
+
+        System.out.println("Введите адрес директории: ");
         String rootDirectory = scanner.nextLine();
+
+        System.out.println("Введите адрес для сохранения файла: ");
+        String pathToNewFile = scanner.nextLine();
 
         MySearcher.searchFiles(new File(rootDirectory), fileList); //C:\\FinPlatforms
         MySearcher.sortList(fileList);
 
         MyReader.readFiles(fileList);
-        MyReader.saveToFile();
+        MyReader.saveToFile(pathToNewFile);
 
     }
 }

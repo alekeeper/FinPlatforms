@@ -27,12 +27,8 @@ public class MyReader {
         }
     }
 
-    public static void saveToFile() {
+    public static void saveToFile (String pathToNewFile) {
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Введите адрес для сохранения файла: ");
-        String pathToNewFile = scanner.nextLine();
         File newFile = new File(pathToNewFile + "\\newFile.txt"); //C:\FinPlatforms\src\main\java\com\sergienko\fileSearch
 
         PrintWriter writer = null;
