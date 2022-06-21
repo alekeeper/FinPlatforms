@@ -27,16 +27,10 @@ public class MyReader {
         }
     }
 
-    public static void saveToFile (String pathToNewFile) {
-
-        File newFile = new File(pathToNewFile + "\\newFile.txt"); //C:\FinPlatforms\src\main\java\com\sergienko\fileSearch
-
-        PrintWriter writer = null;
-        try {
-            writer = new PrintWriter(new BufferedWriter(new FileWriter(newFile, true)));
+    public static void saveToFile(String pathToNewFile) {
+        try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(pathToNewFile + "\\newFile.txt", true)))) {
             writer.println(allLines);
             writer.flush();
-            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

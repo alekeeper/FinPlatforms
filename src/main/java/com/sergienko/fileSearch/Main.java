@@ -26,7 +26,7 @@ public class Main {
         MySearcher.sortList(fileList);
 
         MyReader.readFiles(fileList);
-        MyReader.saveToFile(pathToNewFile);
+        MyReader.saveToFile(pathToNewFile); //C:\FinPlatforms\src\main\java\com\sergienko\fileSearch
 
     }
 }
